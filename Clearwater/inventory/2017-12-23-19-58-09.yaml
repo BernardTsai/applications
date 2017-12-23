@@ -1,0 +1,63 @@
+---
+tenant:
+  name:        Clearwater_SOL
+  description: Clearwater tenant in SOL-B data center
+  password:    secret
+  cloud:       SOL-B
+()
+security_groups:
+- default
+()
+external_security_group_rules:
+- group:            default
+  direction:        egress
+  ethertype:        IPv4
+  protocol:         any
+  min:              0
+  max:              65535
+  mode:             cidr
+  remote_ip_prefix: 0.0.0.0/0
+- group:            default
+  direction:        egress
+  ethertype:        IPv6
+  protocol:         any
+  min:              0
+  max:              65535
+  mode:             cidr
+  remote_ip_prefix: ::/0
+()
+internal_security_group_rules:
+- group:            default
+  direction:        ingress
+  ethertype:        IPv4
+  protocol:         any
+  min:              0
+  max:              65535
+  mode:             group
+  remote_group:     default
+- group:            default
+  direction:        ingress
+  ethertype:        IPv6
+  protocol:         any
+  min:              0
+  max:              65535
+  mode:             group
+  remote_group:     default
+()
+networks:
+- name: shared_test_vn
+  ipv4:
+    cidr: 198.18.208.0/25
+  ipv6:
+    cidr: fdfd:1:1:a208::/64
+- name: test-ext-dummy-02
+()
+nodes:
+()
+volumes:
+- name:   Clearwater_SOL_ellis_0_data
+  server: None
+  type:   INT
+  size:   20
+  device: None
+()
