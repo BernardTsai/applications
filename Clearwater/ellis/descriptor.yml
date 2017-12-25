@@ -3,8 +3,9 @@ vnf:
   name: "Clearwater"
 
 tenant:
-  name:  "SOL"
-  cloud: "SOL-B"
+  name:     "SOL"
+  cloud:    "SOL-B"
+  password: "secret"
 
 cluster:
   name:   "ellis"
