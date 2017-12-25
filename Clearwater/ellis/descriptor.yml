@@ -1,28 +1,21 @@
 ---
+vnf:
+  name: "Clearwater"
+
 tenant:
-  name:        "Clearwater_SOL"
-  description: "Clearwater tenant in SOL-B data center"
-  password:    "secret"
-  cloud:       "SOL-B"
+  name:  "SOL"
+  cloud: "SOL-B"
 
 cluster:
-  name: Clearwater_SOL_ellis
-
-ports:
-- name: oam
-- name: m2m1
-
-node:
-- availability_zone: INT
-  flavor:            m1.small
-  image:             ubuntu-14.04.5-x86_64
-  key_name:          Clearwater_SOL_keypair
-  nics:
-      - network-name: oam
-      - network-name: m2m1
-
-volumes:
-    - name:        data
-      volume_type: INT
-      size:        20
-      device:      /dev/vdb
+  name:   "ellis"
+  zone:   "INT"
+  flavor: "m1.small"
+  image:  "ubuntu-14.04.5-x86_64"
+  ports:
+  - network: "oam"
+  - network: "m2m1"
+  volumes:
+  - name:   "data"
+    type:   "INT"
+    size:   20
+    device: "/dev/vdb"
