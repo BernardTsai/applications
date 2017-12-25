@@ -5,27 +5,24 @@ tenant:
   password:    "secret"
   cloud:       "SOL-B"
 
-ports:
-- name:           Clearwater_SOL_ellis_{{index}}_oam
-  network:        Clearwater_SOL_oam
-  security_group: Clearwater_SOL_ellis_oam
-- name:           Clearwater_SOL_ellis_{{index}}_m2m1
-  network:        Clearwater_SOL_m2m1
-  security_group: Clearwater_SOL_ellis_m2m1
+cluster:
+  name: Clearwater_SOL_ellis
 
-nodes:
-- name:              Clearwater_SOL_ellis_{{index}}
-  availability_zone: {{zone}}
+ports:
+- name: oam
+- name: m2m1
+
+node:
+- availability_zone: {{zone}}
   flavor:            m1.small
   image:             ubuntu-14.04.5-x86_64
   key_name:          Clearwater_SOL_keypair
   nics:
-      - port-name: Clearwater_SOL_ellis_{{index}}_oam
-      - port-name: Clearwater_SOL_ellis_{{index}}_m2m1
+      - network-name: oam
+      - network-name: m2m1
 
 volumes:
-    - name:        Clearwater_SOL_ellis_{{index}}_data
-      server:      Clearwater_SOL_ellis_{{index}}
+    - name:        data
       volume_type: INT
       size:        20
       device:      /dev/vdb
