@@ -1,9 +1,12 @@
 ---
+vnf:
+  name: "Clearwater"
+
 tenant:
-  name:        "Clearwater_SOL"
-  description: "Clearwater tenant in SOL-B data center"
-  password:    "secret"
+  name:        "SOL"
   cloud:       "SOL-B"
+  password:    "secret"
+  description: "Clearwater tenant in SOL-B data center"
 
 security_groups:
 - Clearwater_SOL_jumphost_svc2
