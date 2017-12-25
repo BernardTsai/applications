@@ -13,7 +13,7 @@ ports:
 - name: m2m1
 
 node:
-- availability_zone: {{zone}}
+- availability_zone: INT
   flavor:            m1.small
   image:             ubuntu-14.04.5-x86_64
   key_name:          Clearwater_SOL_keypair
