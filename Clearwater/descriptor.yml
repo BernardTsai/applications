@@ -7,6 +7,7 @@ tenant:
   cloud:       "SOL-B"
   password:    "secret"
   description: "Clearwater tenant in SOL-B data center"
+  public_key:  "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFH/MHCYLR+dGPVeXsfRWFkcA1GJbXKfil0JwS7jnYdL0sjl0KfxXCXF148xWSL4xmyVzDEg/ktgM9VCMOs+bf5giepJsOssnQvfQl2azy4OUueuvxZ7uRWSiq3dx5Ov8dCXtg2yDiMj9SB+zz2UFNslIZFt4WEB4X6i1U3FzBRWnyrFzuyUgvHUEdVh9hRWrm0Hcwy8ARaZIFZxz4HWoV/2E3NBVeLDDCfYf2Pd/lg14j1BeNXtKIzNACVyFPkQhHTwSnfzHLvzZtehgZsp+7ditm8HXFbyWZzM7hoyaW3Ve6F9/P0JCN8UmQ7lp3DMHTE4JvVqpIAePMDG6yU98r root@awx"
 
 security_groups:
 - Clearwater_SOL_jumphost_svc2
